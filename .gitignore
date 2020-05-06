@@ -1,0 +1,14 @@
+
+# ビルドファイル
+/dist
+
+# dependencies
+/node_modules
+
+# IDE (VSCode)
+.vscode/*
+!.vscode/recommended_settings.json
+!.vscode/extensions.json
+
+# システムファイル
+.DS_Store
