@@ -25,7 +25,7 @@ describe('AppComponent', () => {
   it(`should have as title 'Angular Tutorial Using NgRx'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Angular Tutorial NgRx');
+    expect(app.title).toEqual('Angular Tutorial Using NgRx');
   });
 
 });

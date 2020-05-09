@@ -4,8 +4,6 @@ import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { CartService } from '../cart.service';
 import { ProductService } from '../product.service';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterLinkStubDirective } from 'testing/router-stubs';
-import { BehaviorSubject } from 'rxjs';
 
 describe('ProductDetailsComponent', () => {
   let component: ProductDetailsComponent;
@@ -18,7 +16,6 @@ describe('ProductDetailsComponent', () => {
       ],
       declarations: [
         ProductDetailsComponent,
-        RouterLinkStubDirective,
       ],
       providers: [
         {
@@ -26,7 +23,6 @@ describe('ProductDetailsComponent', () => {
           useValue: {
             snapShot: {paramMap: convertToParamMap({ productId: 1 })}
           }
-          // useValue: { params: new BehaviorSubject({}) },
         },
         CartService,
         ProductService,
