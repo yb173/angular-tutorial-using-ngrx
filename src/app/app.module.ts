@@ -1,37 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { CartComponent } from './cart/cart.component';
-import { ShippingComponent } from './shipping/shipping.component';
+
+import { AppRoutingModule } from 'src/app/app-routing.module';
+
+import { AppStoreModule } from 'src/app/store/app-store.module';
+
+import { CoreModule } from './core/core.module';
+import { AppComponent } from 'src/app/core/containers';
+
 
 @NgModule({
   imports: [
+    // Angular
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule,
 
+    //
+    CoreModule,
+
+    // Routing
     AppRoutingModule,
+
+    // NgRx
+    AppStoreModule,
   ],
   declarations: [
-    AppComponent,
-    TopBarComponent,
-    ProductListComponent,
-    ProductAlertsComponent,
-    ProductDetailsComponent,
-    CartComponent,
-    ShippingComponent,
+
   ],
-  providers: [],
   bootstrap: [
     AppComponent
   ]

@@ -1,0 +1,18 @@
+@mixin list-base() {
+    display: flex;
+    flex-direction: column; /* 上から下へ */
+    flex-wrap: wrap; /* 折り返しあり */
+}
+
+@mixin list-item-base() {
+    width: 100%;
+    min-width: 400px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: row; /* 左から右へ */
+    justify-content: space-between; /* できるだけ間隔を空ける */
+    padding: 16px 32px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    background-color: #EEEEEE;    
+}

@@ -1,32 +1,27 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import { ProductListComponent } from 'src/app/product-list/product-list.component';
-import { ProductDetailsComponent } from 'src/app/product-details/product-details.component';
-import { CartComponent } from 'src/app/cart/cart.component';
-import { ShippingComponent } from 'src/app/shipping/shipping.component';
+import { Routes, RouterModule, PreloadAllModules, NoPreloading } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProductListComponent
+    redirectTo: '/e-commerce',
+    pathMatch: 'full',
   },
   {
-    path: 'products/:productId',
-    component: ProductDetailsComponent
+    path: 'e-commerce',
+    loadChildren: () => import('./e-commerce/e-commerce.module').then(m => m.ECommerceModule)
   },
-  {
-    path: 'cart',
-    component: CartComponent
-  },
-  {
-    path: 'shipping',
-    component: ShippingComponent
-  },
+  // {
+  //   path: 'page-not-found',
+  //   component:
+  // },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    useHash: true,
+    // preloadingStrategy: NoPreloading,
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
