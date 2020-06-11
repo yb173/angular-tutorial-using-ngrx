@@ -52,4 +52,11 @@ export class ECommerceFacade {
     this.store.dispatch(ECommerceActions.addToCart({ item }));
   }
 
+  /**
+   * カートに入っているアイテムを削除します．
+   */
+  clearCart(): void {
+    this.store.dispatch(ECommerceActions.clearCart());
+  }
+
 }

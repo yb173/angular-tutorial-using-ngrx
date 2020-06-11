@@ -1,0 +1,5 @@
+@import "shipping-cost-list-base";
+
+:host {
+    @include list-item-base();
+}

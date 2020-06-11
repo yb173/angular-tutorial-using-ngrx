@@ -1,22 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import {
-  TopBarComponent,
+  AddressComponent,
+  ButtonComponent,
+  CartFormComponent,
+  ItemListComponent,
+  ItemListItemComponent,
+  NameComponent,
+  ProductAlertsComponent,
   ProductDetailsComponent,
-  CartItemListComponent,
-  CartItemListItemComponent,
+  ProductListComponent,
+  ProcuctListItemComponent,
+  ShippingCostListComponent,
+  ShippingCostListItemComponent,
+  TopBarComponent,
 } from './components';
 
 import {
-  ProductListComponent,
-  ProductAlertsComponent,
-  ProductDetailsPageComponent,
   CartPageComponent,
-  ShippingComponent,
   ECommerceBaseComponent,
+  ProductDetailsPageComponent,
+  ProductListPageComponent,
+  ShippingPageComponent,
 } from './containers';
 
 import { ECommerceStoreModule } from './store/e-commerce-store.module';
@@ -25,28 +32,35 @@ import { ECommerceRoutingModule } from './e-commerce-routing.module';
 import { ProductService } from './services/product.service';
 import { CartService } from './services/cart.service';
 
-
 export const COMPONENTS = [
-  TopBarComponent,
+  AddressComponent,
+  ButtonComponent,
+  CartFormComponent,
+  ItemListComponent,
+  ItemListItemComponent,
+  NameComponent,
+  ProductAlertsComponent,
   ProductDetailsComponent,
-  CartItemListComponent,
-  CartItemListItemComponent,
+  ProductListComponent,
+  ProcuctListItemComponent,
+  ShippingCostListComponent,
+  ShippingCostListItemComponent,
+  TopBarComponent,
 ];
 
 export const CONTAINERS = [
   ECommerceBaseComponent,
-  ProductListComponent,
-  ProductAlertsComponent,
+  ProductListPageComponent,
   ProductDetailsPageComponent,
   CartPageComponent,
-  ShippingComponent,
+  ShippingPageComponent,
 ];
 
 @NgModule({
   imports: [
+    // Angular
     CommonModule,
     ReactiveFormsModule,
-    // RouterModule,
 
     // Routing
     ECommerceRoutingModule,

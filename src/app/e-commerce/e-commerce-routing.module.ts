@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import {
-  ProductListComponent,
+  ProductListPageComponent,
   ProductDetailsPageComponent,
   CartPageComponent,
-  ShippingComponent,
+  ShippingPageComponent,
   ECommerceBaseComponent,
 } from './containers';
 
@@ -16,7 +16,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: ProductListComponent
+        component: ProductListPageComponent
       },
 
       {
@@ -29,7 +29,7 @@ const routes: Routes = [
       },
       {
         path: 'shipping',
-        component: ShippingComponent
+        component: ShippingPageComponent
       },
     ]
   },

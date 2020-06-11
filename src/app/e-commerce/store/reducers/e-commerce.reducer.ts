@@ -69,7 +69,7 @@ export const reducer = createReducer(
     ...state,
     items: [...state.items, item],
   })),
-  on(ECommerceActions.removeAllItems, (state) => ({
+  on(ECommerceActions.clearCart, (state) => ({
     ...state,
     items: [],
   })),

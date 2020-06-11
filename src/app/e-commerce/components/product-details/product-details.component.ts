@@ -19,9 +19,6 @@ export class ProductDetailsComponent {
   @Input() product: Product;
   @Output() addToCart: EventEmitter<Product> = new EventEmitter();
 
-  /**
-   * Buy ボタンクリックのイベントハンドラです．
-   */
   onClick(): void {
     this.addToCart.emit(this.product);
   }

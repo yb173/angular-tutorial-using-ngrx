@@ -1,0 +1,8 @@
+@mixin list-base() {
+    display: flex;
+    flex-direction: column; /* 上から下へ */
+    flex-wrap: wrap; /* 折り返しあり */
+}
+
+@mixin list-item-base() {
+}

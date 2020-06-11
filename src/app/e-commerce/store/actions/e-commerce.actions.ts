@@ -68,8 +68,8 @@ export const getItems = createAction(
 /**
  * カートのアイテムをクリア
  */
-export const removeAllItems = createAction(
-  '[E-Commerce]  Remove All Items',
+export const clearCart = createAction(
+  '[E-Commerce]  Clear Cart',
 );
 
 /**
