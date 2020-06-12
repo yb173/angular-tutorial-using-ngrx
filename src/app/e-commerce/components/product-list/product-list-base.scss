@@ -5,4 +5,5 @@
 }
 
 @mixin list-item-base() {
+    flex: 0 1 auto; /* flex-grow flex-shrink, flex-basis */
 }

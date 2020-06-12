@@ -3,3 +3,8 @@
 :host {
     @include list-base();
 }
+@import "product-list-base";
+
+:host {
+    @include list-base();
+}
